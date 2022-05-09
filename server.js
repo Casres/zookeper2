@@ -97,13 +97,14 @@ app.get("/api/animals", (req, res) => {
   res.json(results);
 });
 
-app.post('/api/animals', (req, res) => {
-  // set id based on what the next index of the array will be
+app.post("/api/animals", (req, res) => {
+  // req.body is where our incoming content will be
+  console.log(req.body, "Hi mom!");
+  // this sets the id value to what ever the next index on the array
   req.body.id = animals.length.toString();
 
-  // if any data in req.body is incorrect, send 400 error back
   if (!validateAnimal(req.body)) {
-    res.status(400).send('The animal is not properly formatted.');
+    res.status(400).send('The animal is not properly formatted');
   } else {
     const animal = createNewAnimal(req.body, animals);
     res.json(animal);
@@ -114,15 +115,12 @@ function validateAnimal(animal) {
   if (!animal.name || typeof animal.name !== 'string') {
     return false;
   }
-
   if (!animal.species || typeof animal.species !== 'string') {
     return false;
   }
-
   if (!animal.diet || typeof animal.diet !== 'string') {
     return false;
   }
-
   if (!animal.personalityTraits || typeof animal.personalityTraits !== 'string') {
     return false;
   }
