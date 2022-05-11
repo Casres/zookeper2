@@ -7,6 +7,11 @@ const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// Every time we create a server that will serve a 
+// front end as well as JSON data, 
+// we'll always want to use this middleware.
+app.use(express.static('./'));
+
 // this parses incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // this parses incoming data
@@ -111,6 +116,10 @@ function validateAnimal(animal) {
   }
   return true;
 }
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!!`);
