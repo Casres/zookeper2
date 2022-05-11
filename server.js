@@ -108,10 +108,7 @@ function validateAnimal(animal) {
   if (!animal.diet || typeof animal.diet !== "string") {
     return false;
   }
-  if (
-    !animal.personalityTraits ||
-    typeof animal.personalityTraits !== "string"
-  ) {
+  if (!animal.personalityTraits || !Array.isArray(animal.personalityTraits)) {
     return false;
   }
   return true;
@@ -119,6 +116,10 @@ function validateAnimal(animal) {
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'));
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './assets/js/script.js'));
 });
 
 app.listen(PORT, () => {
