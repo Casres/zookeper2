@@ -1,4 +1,3 @@
-const { response } = require("express");
 
 const $animalForm = document.querySelector('#animal-form');
 
@@ -40,7 +39,7 @@ const handleAnimalFormSubmit = event => {
     if (response.ok) {
       return response.json();
     }
-    alert('Error' + response.statusText);
+    alert('Error is this => ' + response.statusText);
   })
   .then(postResponse => {
     console.log(postResponse);
