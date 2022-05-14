@@ -4,6 +4,8 @@ const { animals } = require("./data/animals.json");
 
 // starts the server
 const express = require("express");
+const res = require("express/lib/response");
+const { application } = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -114,12 +116,21 @@ function validateAnimal(animal) {
   return true;
 }
 
+// this is going to be the main page
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'));
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './assets/js/script.js'));
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './animals.html'));
+});
+
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './zookeepers.html'));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './index.html'));
 });
 
 app.listen(PORT, () => {

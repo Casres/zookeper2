@@ -110,28 +110,13 @@
       "id": "10"
     },
     {
-      "name": "Special",
+      "name": "Charlie",
       "species": "Lemur",
       "diet": "herbivore",
       "personalityTraits": [
-        "hungry",
-        "zany",
-        "anxious",
-        "loving",
-        "goofy"
+        "hungry"
       ],
       "id": "11"
-    },
-    {
-      "name": "Special 2",
-      "species": "Tiger",
-      "diet": "herbivore",
-      "personalityTraits": [
-        "hungry",
-        "loving",
-        "goofy"
-      ],
-      "id": "12"
     }
   ]
 }
