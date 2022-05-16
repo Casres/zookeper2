@@ -111,10 +111,10 @@
     },
     {
       "name": "Charlie",
-      "species": "Lemur",
-      "diet": "herbivore",
+      "species": "Monkey",
+      "diet": "folivore",
       "personalityTraits": [
-        "hungry"
+        "loving"
       ],
       "id": "11"
     }
