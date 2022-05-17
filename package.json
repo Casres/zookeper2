@@ -4,12 +4,13 @@
   "description": "A README generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node __tests__",
     "start": "node server.js"
   },
   "author": "Christian Casillas",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.2.2"
+    "inquirer": "^8.2.2",
+    "jest": "^28.1.0"
   }
 }
