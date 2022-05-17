@@ -8,9 +8,9 @@ const fs = require('fs');
 const {
     filterByQuery,
     findById,
-    creatNewAnimal,
+    createNewAnimal,
     validateAnimal,
-} = require('path');
+} = require('../lib/animals2');
 
 const {animals} = require('../data/animals.json');
 
@@ -62,7 +62,7 @@ test("finds by id", () => {
             personalityTraits: ['impish', 'sassy', 'brave']
         }
     ];
-    const result = findById("3", straightAnimals);
+    const result = findById(3, startingAnimals);
 
     expect(result.name).toBe("Erica");
 });
