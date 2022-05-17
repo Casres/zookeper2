@@ -110,9 +110,9 @@
       "id": "10"
     },
     {
-      "name": "Charlie",
+      "name": "King",
       "species": "Monkey",
-      "diet": "folivore",
+      "diet": "omnivore",
       "personalityTraits": [
         "loving"
       ],
