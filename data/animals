@@ -110,8 +110,14 @@
       "id": "10"
     },
     {
-      "name": "Darlene",
-      "id": "12345"
+      "name": "Piper",
+      "species": "Bird",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "loving",
+        "goofy"
+      ],
+      "id": "11"
     }
   ]
 }

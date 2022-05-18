@@ -10,8 +10,6 @@ const { animals } = require("./data/animals.json");
 
 // starts the server
 const express = require("express");
-const res = require("express/lib/response");
-const { application } = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
 

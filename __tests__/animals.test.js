@@ -14,6 +14,8 @@ const {
 
 const {animals} = require('../data/animals.json');
 
+jest.mock('fs');
+
 test("creates an animal object", () => {
     const animal = createNewAnimal(
         {name: "Darlene", id: "12345"}, 
