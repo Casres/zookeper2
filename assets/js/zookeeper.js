@@ -35,7 +35,7 @@ const handleGetZookeeperSubmit = event => {
 };
 
 const getZookeepers = (formData = {}) => {
-  let queryUrl = '/api/zookeepers';
+  let queryUrl = '/api/zookeepers?';
 
   Object.entries(formData).forEach(([key,value]) => {
     queryUrl += `${key}=${value}&`;
